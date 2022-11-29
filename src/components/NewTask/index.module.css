@@ -1,0 +1,36 @@
+.newTask {
+  margin-top: -1.875rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.newTask__input {
+  background: var(--gray-500);
+  padding: 1rem;
+  border: 0.125rem solid var(--gray-700);
+  border-radius: 0.5rem;
+  flex: 1;
+  color: var(--gray-100);
+}
+
+.newTask__input::placeholder {
+  color: var(--gray-300);
+}
+
+.newTask__button {
+  background: var(--blue-dark);
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-100);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
