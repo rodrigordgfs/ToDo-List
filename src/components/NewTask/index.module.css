@@ -33,4 +33,9 @@
   padding: 1rem;
   border-radius: 0.5rem;
   border: none;
+  cursor: pointer;
+}
+
+.newTask__button:hover {
+  background: var(--blue);
 }

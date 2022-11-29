@@ -1,0 +1,46 @@
+.taskList__counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.taskList__counter__created {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.taskList__counter__created p {
+  color: var(--blue);
+}
+
+.taskList__counter__done p {
+  color: var(--purple);
+}
+
+.taskList__counter__created p,
+.taskList__counter__done p {
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.taskList__counter__created span,
+.taskList__counter__done span {
+  color: var(--gray-200);
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  background: var(--gray-400);
+  border-radius: 15px;
+  padding: 0.125rem 0.5rem;
+}
+
+.taskList__counter__done {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
