@@ -1,0 +1,20 @@
+.taskListEmpty {
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-300);
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-300);
+}
+
+.taskListEmpty__icon {
+  margin-top: 4rem;
+}
+
+.taskListEmpty p {
+  margin-top: 1rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
