@@ -3,7 +3,13 @@ import { Trash } from "phosphor-react";
 import { ITaskProps } from "../../interfaces/ITaskProps";
 import { Check } from "phosphor-react";
 
-export function Task({ description, done }: ITaskProps) {
+export function Task({ id, description, done, onDeleteTask }: ITaskProps) {
+  function toogleDeleteTask() {
+    if (onDeleteTask) {
+      onDeleteTask(id);
+    }
+  }
+
   return (
     <article className={styles.task}>
       {done ? (
@@ -24,7 +30,7 @@ export function Task({ description, done }: ITaskProps) {
       >
         {description}
       </p>
-      <div className={styles.task__delete}>
+      <div onClick={toogleDeleteTask} className={styles.task__delete}>
         <Trash size={20} />
       </div>
     </article>

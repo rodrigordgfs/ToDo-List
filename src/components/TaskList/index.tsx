@@ -4,8 +4,14 @@ import { TaskCounter } from "../TaskCounter";
 import { TaskListEmpty } from "../TaskListEmpty";
 import styles from "./index.module.css";
 
-export function TaskList({ tasks }: ITasksProps) {
+export function TaskList({ tasks, onDeleteTask }: ITasksProps) {
   const tasksDone = tasks.filter((task) => task.done).length as number;
+
+  function handleDeleteTask(id: string) {
+    if (onDeleteTask) {
+      onDeleteTask(id);
+    }
+  }
 
   return (
     <div className={styles.taskList}>
@@ -15,7 +21,15 @@ export function TaskList({ tasks }: ITasksProps) {
       ) : (
         <>
           {tasks.map(({ id, description, done }) => {
-            return <Task key={id} description={description} done={done} />;
+            return (
+              <Task
+                key={id}
+                id={id}
+                description={description}
+                done={done}
+                onDeleteTask={handleDeleteTask}
+              />
+            );
           })}
         </>
       )}
