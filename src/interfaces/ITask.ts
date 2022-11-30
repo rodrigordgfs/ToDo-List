@@ -1,4 +1,5 @@
-export interface ITaskProps {
+export interface ITask {
+  id: string;
   description: string;
   done: boolean;
 }

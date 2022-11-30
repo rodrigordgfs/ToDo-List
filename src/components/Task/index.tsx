@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
 import { Trash } from "phosphor-react";
-import { TaskProps } from "../../interfaces/ITaskProps";
+import { ITaskProps } from "../../interfaces/ITaskProps";
 import { Check } from "phosphor-react";
 
-export function Task({ description, done }: TaskProps) {
+export function Task({ description, done }: ITaskProps) {
   return (
     <article className={styles.task}>
       {done ? (
