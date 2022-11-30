@@ -17,7 +17,13 @@ export function Task({ description, done }: TaskProps) {
           <div className={styles.task__notDone__circle} />
         </div>
       )}
-      <p className={styles.task__description}>{description}</p>
+      <p
+        className={
+          done ? styles.task__descriptionDone : styles.task__description
+        }
+      >
+        {description}
+      </p>
       <div className={styles.task__delete}>
         <Trash size={20} />
       </div>
