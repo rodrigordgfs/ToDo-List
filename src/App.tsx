@@ -16,12 +16,24 @@ function App() {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
   }
 
+  function toogleDoneTask(id: string) {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
+      )
+    );
+  }
+
   return (
     <div>
       <Header />
       <div className={styles.wrapper}>
         <NewTask onNewTask={handleAddNewTask} />
-        <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} />
+        <TaskList
+          tasks={tasks}
+          onDeleteTask={handleDeleteTask}
+          onToogleDoneTask={toogleDoneTask}
+        />
       </div>
     </div>
   );

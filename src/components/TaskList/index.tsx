@@ -4,12 +4,22 @@ import { TaskCounter } from "../TaskCounter";
 import { TaskListEmpty } from "../TaskListEmpty";
 import styles from "./index.module.css";
 
-export function TaskList({ tasks, onDeleteTask }: ITasksProps) {
+export function TaskList({
+  tasks,
+  onDeleteTask,
+  onToogleDoneTask,
+}: ITasksProps) {
   const tasksDone = tasks.filter((task) => task.done).length as number;
 
   function handleDeleteTask(id: string) {
     if (onDeleteTask) {
       onDeleteTask(id);
+    }
+  }
+
+  function toogleDoneTask(id: string) {
+    if (onToogleDoneTask) {
+      onToogleDoneTask(id);
     }
   }
 
@@ -28,6 +38,7 @@ export function TaskList({ tasks, onDeleteTask }: ITasksProps) {
                 description={description}
                 done={done}
                 onDeleteTask={handleDeleteTask}
+                onToogleDoneTask={toogleDoneTask}
               />
             );
           })}
