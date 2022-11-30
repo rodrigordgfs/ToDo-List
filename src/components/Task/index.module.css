@@ -1,0 +1,76 @@
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: var(--gray-500);
+  border-radius: 16px;
+  border: 1px solid var(--gray-300);
+  padding: 1rem;
+}
+
+.task + .task {
+  margin-top: 0.75rem;
+}
+
+.task__description {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  line-height: 1.6;
+  margin: 0 0.75rem;
+}
+
+.task__delete {
+  width: 24px;
+  height: 1.5rem;
+  border-radius: 4px;
+  color: var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.task__delete:hover {
+  background: var(--gray-400);
+  color: var(--danger);
+}
+
+.task__notDone {
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task__notDone__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.task__notDone__circle:hover {
+  background: var(--blue-dark);
+  opacity: 0.2;
+}
+
+.task__done {
+  background: var(--purple-dark);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task__done__circle:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.task__done__circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--purple-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
